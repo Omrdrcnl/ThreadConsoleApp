@@ -8,6 +8,8 @@ class program
     // her classtan ulaşılabilecek bir thread kuyrugu oluşturma
     static ConcurrentQueue<string> ThreadKuyruk = new ConcurrentQueue<string>();
 
+    
+
     static void Main(string[] args)
     {
         Console.WriteLine("Thread oluştıulacak txt dosya yolunu giriniz:");
@@ -26,5 +28,13 @@ class program
                 }
             }
         }
+      
+
+    }
+    // threadların içinde çalışacak fonksiyon
+    
+    static void KelimeFonksiyonu(string kelime)
+    {
+        Console.WriteLine("{0}:{1}", kelime, kelime.Length);
     }
 }
