@@ -33,10 +33,12 @@ class program
         Thread[] calisacakThread = new Thread[ThreadKuyruk.Count];
         int threadIndex = 0;
         foreach (string kelime in ThreadKuyruk)
-        {
+        {   
+            Console.WriteLine("Thread {0} Başarıyla çalıştı. İşlem Sonucu aşağıdadır.", threadIndex);
             calisacakThread[threadIndex] = new Thread(() => KelimeFonksiyonu(kelime));
             calisacakThread[threadIndex].Start();
             Thread.Sleep(3000);
+            
             threadIndex++;
         }
 
